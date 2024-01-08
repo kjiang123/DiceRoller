@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <script src = "script.js"></script>
+</head>
+<body>
+    <h1>Dice Roller</h1>
+    <button id="1Dice" type="button" onclick="setDice1()">1 Die</button>
+    <button id="2Dice" type="button" onclick="setDice2()">2 Dice</button>
+    <button id="3Dice" type="button" onclick="setDice3()">3 Dice</button>
+    <br>
+    <label for="numRolls">How Many Times Do You Want To Roll?</label>
+    <br>
+    <input id="numRolls" type="number" name="numRolls">
+    <button type="button" onclick="submit()">Enter</button>
+    <br>
+    <button type="button" onclick="rollDice()">Roll Dice</button>
+</body>
+</html>
