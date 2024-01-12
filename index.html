@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Roller</title>
     <script src = "script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>Dice Roller</h1>
@@ -19,5 +20,15 @@
     <button type="button" onclick="submit()">Enter</button>
     <br>
     <button type="button" onclick="rollDice()">Roll Dice</button>
+
+    <table id="Table">
+        <tr>
+            <th>Mean</th>
+            <th>Median</th>
+            <th>Mode</th>
+            <th>Doubles</th>
+            <th>Triples</th>
+        </tr>
+    </table>
 </body>
 </html>

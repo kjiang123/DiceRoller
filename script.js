@@ -1,6 +1,11 @@
 var numDice = 0;
 var numRolls = 0;
 
+var checkDice2 = 0;
+var checkDice2 = 0;
+var checkDice3 = 0;
+
+
 function setDice1(){
     numDice = 1;
 }
@@ -21,17 +26,38 @@ function submit(){
 function rollDice() {
   // Roll dice and store the results
   let rolls = [];
+  let doubles = 0;
+  let triples = 0;
+
   for (let i = 0; i < numRolls; i++) {
     let sum = 0;
+    let lastRoll = 0;
+    let doubleCount = 0;
+    let tripleCount = 0;
     for (let j = 0; j < numDice; j++) {
       let roll = Math.floor(Math.random() * 6) + 1;
       sum += roll;
+      if (roll === lastRoll) {
+        doubleCount++;
+        if (doubleCount === 1) {
+          doubles++;
+        } else if (doubleCount === 2) {
+          doubles--;
+          tripleCount++;
+          triples++;
+        }
+      } else {
+        doubleCount = 0;
+      }
+      lastRoll = roll;
     }
     rolls.push(sum);
   }
 
+
   // Calculate mean
   let mean = rolls.reduce((acc, val) => acc + val, 0) / rolls.length;
+  mean = Math.round(mean * 100) / 100; // Round to the nearest hundredth  
 
   // Calculate median
   let sortedRolls = rolls.sort((a, b) => a - b);
@@ -55,15 +81,26 @@ function rollDice() {
       mode.push(roll);
     }
   }
+
   console.log(rolls);
   console.log(mean);
   console.log(median);
   console.log(mode);
+  console.log(doubles);
+  console.log(triples);
 
-  return {
-    rolls,
-    mean,
-    median,
-    mode
-  };
+  let table = document.getElementById("Table");
+  let row = table.insertRow(1);
+  let cell1 = row.insertCell(0);
+  let cell2 = row.insertCell(1);
+  let cell3 = row.insertCell(2);
+  let cell4 = row.insertCell(3);
+  let cell5 = row.insertCell(4);
+  cell1.innerHTML = mean;
+  cell2.innerHTML = median;
+  cell3.innerHTML = mode[0];
+  cell4.innerHTML = doubles;
+  cell5.innerHTML = triples;
 }
+
+
