@@ -3,5 +3,91 @@ table, th, td {
     border-collapse: collpase;
     margin-left: auto;
     margin-right: auto;
+    color: #fff;
 }
 
+th{
+    background-color: #000;
+}
+
+
+
+
+/* From https://getcssscan.com/css-buttons-examples*/
+.Dice {
+  appearance: button;
+  background-color: #7289da;
+  background-image: none;
+  border: 1px solid #7289da;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.Dice{width:fit-content;}
+
+.Dice {
+  text-decoration: none;
+}
+
+.Dice {
+  text-decoration: none;
+  box-shadow:  2px 2px 2px #000;
+
+}
+
+@media (min-width: 768px) {
+  .Dice{
+    padding: 12px 40px;
+  }
+}
+
+.head{
+    text-align: center;
+    color: #fff
+}
+
+.stuff{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.inputStuff{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+body{
+    background-color:#282b30;
+}

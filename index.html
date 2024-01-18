@@ -9,26 +9,34 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Dice Roller</h1>
-    <button id="1Dice" type="button" onclick="setDice1()">1 Die</button>
-    <button id="2Dice" type="button" onclick="setDice2()">2 Dice</button>
-    <button id="3Dice" type="button" onclick="setDice3()">3 Dice</button>
-    <br>
-    <label for="numRolls">How Many Times Do You Want To Roll?</label>
-    <br>
-    <input id="numRolls" type="number" name="numRolls">
-    <button type="button" onclick="submit()">Enter</button>
-    <br>
-    <button type="button" onclick="rollDice()">Roll Dice</button>
+    <h1 class="head" style="align-self:center">Dice Roller</h1>
 
+    <div class="stuff">
+        <button id="1Dice" type="button" onclick="setDice1()" class="Dice">1 Die</button>
+        <button id="2Dice" type="button" onclick="setDice2()" class="Dice">2 Dice</button>
+        <button id="3Dice" type="button" onclick="setDice3()" class="Dice">3 Dice</button>
+    </div>
+
+    <div class="title">
+        <label for="numRolls">How Many Times Do You Want To Roll?</label>
+    </div>
+
+    <div class="inputStuff">
+        <input id="numRolls" type="number" name="numRolls" style="margin: 10px">
+        <button type="button" onclick="submit()" class="Dice">Enter</button>
+        <br>
+        <button type="button" onclick="rollDice()" class="Dice">Roll Dice</button>
+    </div>
+    <div class="tableDiv">
     <table id="Table">
-        <tr>
-            <th>Mean</th>
-            <th>Median</th>
-            <th>Mode</th>
-            <th>Doubles</th>
-            <th>Triples</th>
-        </tr>
-    </table>
+            <tr>
+                <th>Mean</th>
+                <th>Median</th>
+                <th>Mode</th>
+                <th>Doubles</th>
+                <th>Triples</th>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
