@@ -1,13 +1,21 @@
-table, th, td {
-    border: 2px solid black;
-    border-collapse: collpase;
-    margin-left: auto;
-    margin-right: auto;
-    color: #fff;
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
 }
 
-th{
-    background-color: #000;
+th {
+  background-color: #7289da;
+  color: white;
+  font-weight: normal;
+  padding: 8px;
+}
+
+td {
+  border: 2px solid black;
+  padding: 8px;
+  text-align: center;
+  color: white;
 }
 
 

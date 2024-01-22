@@ -103,4 +103,7 @@ function rollDice() {
   cell5.innerHTML = triples;
 }
 
+function resetTable(){
+  location.reload();
+}
 
